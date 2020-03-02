@@ -28,6 +28,13 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
