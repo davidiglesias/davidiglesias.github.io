@@ -29,6 +29,11 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+p#small {
+    font-size:1em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: #333;
+}
 img {
     padding: 0;
     display: block;
