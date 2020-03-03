@@ -20,22 +20,23 @@ a {
     text-decoration: none;
     color: #999;
 }
-a:hover {
-    text-decoration: underline;
-}
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
+}
+h2 {
+    font-size: 3em;
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
 }
 p {
     font-size: 1.5em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     line-height: 1.4em;
     color: #333;
 }
 p#small {
     font-size:1em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     color: #333;
 }
 img {
@@ -57,4 +58,47 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('https://cdn.imgbin.com/8/15/11/imgbin-fana-fanna-fi-allah-sufism-qawwali-pir-sufi-htPrbziWB3CakXUuBGjsfQYQp.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
 }
