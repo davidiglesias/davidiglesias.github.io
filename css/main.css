@@ -3,13 +3,13 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
 nav ul li {
-    display: block;
+    display: inline;
     margin-right: 20px;
 }
 footer ul li {
@@ -25,7 +25,8 @@ h1 {
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
 }
 h2 {
-    font-size: 3em;
+    font-size: 2em;
+    width: 70%;
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
 }
 p {
@@ -35,7 +36,7 @@ p {
     color: #333;
 }
 p#small {
-    font-size:1em;
+    font-size: 1.2em;
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     color: #333;
 }
@@ -50,46 +51,38 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
-
-ul.posts { 
-    margin: 20px auto 40px; 
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 70%;
+    font-size: 1.5em;
+}
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
 ul.posts li {
     list-style: none;
 }
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Gill Sans", sans-serif;
+}
+
 body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
+    width: 100%;
+    color: #777;
+    line-height: 1.8;
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('https://cdn.imgbin.com/8/15/11/imgbin-fana-fanna-fi-allah-sufism-qawwali-pir-sufi-htPrbziWB3CakXUuBGjsfQYQp.jpg');
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
+    background-image: url("../assets/images/IMG_2181.png");
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -97,8 +90,8 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
+    .bgimg-1 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
 }

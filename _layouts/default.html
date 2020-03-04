@@ -1,57 +1,81 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			<div class="w3-top">
-				<div class="w3-bar" id="myNavbar">
-				  <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-					<i class="fa fa-bars"></i>
-				  </a>
-				  <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
-				  <a href="/about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-				  <a href="/cv" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CV</a>
-				  <a href="/blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-bars"></i> BLOG</a>
-				  <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-					<i class="fa fa-search"></i>
-				  </a> -->
-				</div>
-			  
-				<!-- Navbar on small screens -->
-				<!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-				  <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-				  <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-				  <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-				  <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-				</div> -->
-			</div>
-		</head>
-		<body>
-			<!-- <nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav> -->
-			<!-- <div class="container"> -->
-			
-			{{ content }}
-			
-			<!-- </div>/.container -->
-			<!-- <footer>
-	    		<ul>
-        		<li><a href="mailto:iglesias.david.ignacio@gmail.com">email</a></li>
-        		<li><a href="https://github.com/davidiglesias">GitHub</a></li>
-        		<li><a href="https://www.linkedin.com/in/david-iglesias-echevarria/">LinkedIn</a></li>
-				</ul>
-			</footer> -->
-		</body>
-	</html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+<body>
+    <title>{{ page.title }}</title>
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="/" class="w3-bar-item w3-button w3-hover-red"><i class="fa fa-home"></i> HOME</a>
+            <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-hover-red"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="/cv" class="w3-bar-item w3-button w3-hide-small w3-hover-red"><i class="fa fa-envelope"></i> CV</a>
+            <a href="/blog" class="w3-bar-item w3-button w3-hide-small w3-hover-red"><i class="fa fa-bars"></i> BLOG</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="/about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="/cv/" class="w3-bar-item w3-button" onclick="toggleFunction()">CV</a>
+            <a href="/blog" class="w3-bar-item w3-button" onclick="toggleFunction()">BLOG</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+    <!-- <div class="container"> -->
+
+    {{ content }}
+
+    <!-- </div> -->
+    <footer class="w3-center w3-black w3-padding-32 w3-bottom">
+        <a href="/" class="w3-button w3-light-grey w3-hover-red"><i class="fa fa-arrow-up w3-margin-right"></i>Top</a>
+        <div class="w3-xxlarge w3-section">
+            <i href="https://linkedin.com/in/david-iglesias-echevarria" class="fa fa-linkedin w3-hover-opacity"></i>
+            <i href="https://github.com/davidiglesias" class="fa fa-github w3-hover-opacity"></i>
+        </div>
+    </footer>
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+</html>
